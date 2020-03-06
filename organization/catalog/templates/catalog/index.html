@@ -1,0 +1,43 @@
+<!--
+<ul>
+        {% for account in allAccountDetails %}
+                <li>
+                        <a href="">
+                                {{account.account_id}}
+                        </a>
+                        <br><br>
+                        {{account.account_name}}
+                </li>
+        {% endfor %}
+</ul>
+-->
+        
+<style>
+        table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+        }
+</style>
+<div style="padding: 1in;">
+        <table>
+                <tr>
+                        <th>ACCOUNT ID</th>
+                        <th>ACCOUNT NAME</th>
+                </tr>
+                {% for account in allAccountDetails %}
+                <tr> 
+                        
+                                <td align="center">
+                                                {{account.account_id}}
+
+                                </td>
+                                <td align="center">
+                                                <a href="{{account.account_id}}">
+                                        {{account.account_name}} </a>
+                                </td>
+                        
+                </tr>
+                {% endfor %}
+        </table>
+</div>
+
